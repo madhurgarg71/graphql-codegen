@@ -1,8 +1,10 @@
 
+const {gql} = require("graphql-request");
+
 const finalTypes = [
   gql`
   
-    type Todo {
+    type TTodo {
       userId: Int
       id: Int
       title: String
@@ -22,6 +24,7 @@ const finalTypes = [
 
     type TUser {
       name: String
+      age: Int!
       education: TEducation
       experience: [TExperience]
     }
@@ -33,7 +36,7 @@ const finalSchema = [
   gql`
     type Query {
         
-  getTodo(id: Int!): Todo
+  getTodo(id: Int!): TTodo
 
   getUser: TUser
 

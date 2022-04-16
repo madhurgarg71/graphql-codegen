@@ -15,6 +15,7 @@ const types = [
 
     type TUser {
       name: String
+      age: Int!
       education: TEducation
       experience: [TExperience]
     }

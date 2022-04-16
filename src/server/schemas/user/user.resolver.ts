@@ -1,9 +1,10 @@
-export const UserResolver = {
+import { Resolvers } from "./../../../../graphql/generated";
+export const UserResolver: Resolvers = {
   Query: {
     getUser: () => {
       return {
         name: "Madhur Garg",
-        age: 27,
+        age: 20,
         education: {
           school: "JAYPEE UNIVERSITY",
           degree: "B.Tech",

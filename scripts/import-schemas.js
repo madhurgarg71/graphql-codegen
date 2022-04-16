@@ -27,6 +27,8 @@ schemas.reduce((acc, schema) => {
 const { queries, types } = res;
 
 const code = `
+const {gql} = require("graphql-request");
+
 const finalTypes = [
   gql\`
   ${types}

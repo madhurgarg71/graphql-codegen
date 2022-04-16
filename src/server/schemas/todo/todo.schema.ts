@@ -2,7 +2,7 @@ const { gql } = require("graphql-request");
 
 const types = [
   gql`
-    type Todo {
+    type TTodo {
       userId: Int
       id: Int
       title: String
@@ -12,7 +12,7 @@ const types = [
 ];
 
 const queries = gql`
-  getTodo(id: Int!): Todo
+  getTodo(id: Int!): TTodo
 `;
 
 module.exports = {
