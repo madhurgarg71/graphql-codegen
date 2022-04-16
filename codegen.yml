@@ -1,10 +1,11 @@
 overwrite: true
 schema:
-  - "src/graphql/schema.ts":
+  - "src/server/schemas/generatedSchema.ts":
       noRequire: true
-documents: null
+documents: "src/server/queries.ts"
 generates:
   ./graphql/generated.ts:
     plugins:
       - typescript
       - typescript-operations
+      - typescript-react-query

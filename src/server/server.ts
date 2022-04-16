@@ -2,7 +2,7 @@ import express from "express";
 import { graphqlHTTP } from "express-graphql";
 import { makeExecutableSchema } from "graphql-tools";
 import { resolverMap } from "./resolversMap";
-import { typeDefs } from "./schemasMap";
+import { typeDefs } from "./../server/schemas/generatedSchema";
 
 const schema = makeExecutableSchema({
   typeDefs: typeDefs,

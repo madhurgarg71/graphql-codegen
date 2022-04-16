@@ -1,4 +1,4 @@
-import { gql } from "graphql-request";
+const { gql } = require("graphql-request");
 
 const types = [
   gql`
@@ -18,19 +18,14 @@ const types = [
       education: TEducation
       experience: [TExperience]
     }
-
-    type Todo {
-      userId: Int
-      id: Int
-      title: String
-      completed: Boolean
-    }
   `,
 ];
 
 const queries = gql`
-  getTodo(id: Int!): Todo
   getUser: TUser
 `;
 
-export { types, queries };
+module.exports = {
+  types,
+  queries,
+};

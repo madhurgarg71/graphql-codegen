@@ -1,6 +1,3 @@
-import { fetchTodoApi } from "../../api";
-
-// The root provides a resolver function for each API endpoint
 export const UserResolver = {
   Query: {
     getUser: () => {
@@ -23,9 +20,6 @@ export const UserResolver = {
           },
         ],
       };
-    },
-    getTodo: (_: any, args: any) => {
-      return fetchTodoApi(args.id);
     },
   },
 };
