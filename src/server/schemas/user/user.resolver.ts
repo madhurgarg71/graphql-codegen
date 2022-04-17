@@ -1,5 +1,6 @@
+import { Context } from "../../server";
 import { Resolvers } from "./../../../../graphql/generated";
-export const UserResolver: Resolvers = {
+export const UserResolver: Resolvers<Context> = {
   Query: {
     getUser: () => {
       return {
